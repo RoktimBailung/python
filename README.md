@@ -1,0 +1,1 @@
+This repository contains all my Python codes, including scripts, projects, and experiments. From automation to data analysis, you'll find a variety of useful and interesting Python programs here. Stay tuned for updates!
