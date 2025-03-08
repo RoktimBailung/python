@@ -37,3 +37,30 @@ def discount(cost,dis):
 amount=float(input("Enter the bill amount \t"))
 d=float(input("Enter the discount percentage \t"))
 print("The Total Balance to be paid is =",discount(amount,d))
+
+#  functions to find the minimum  and maximum from a list
+
+def l_min(l):
+    min1=l[0]
+    for i in range(len(l)):
+        if (l[i]<min1):
+            min1=l[i]
+    return min1
+
+def l_max(l):
+    max1=l[0]
+    for o in range(len(l)):
+        if (l[i]>max1):
+            max1=l[i]
+    return max1
+
+x=[]
+i=1
+while(i!=0):
+    x1=input("Enter the element of the list \t")
+    x.append(x1)
+    i=int(input("Enter '0' to stop and '1' to continue entering on list l \t"))
+
+print("The list l=",x)
+print("\n The minimum element in the list is ",l_min(x))
+print("\n The maximum element in the list is ",l_max(x))
