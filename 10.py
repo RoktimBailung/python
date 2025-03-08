@@ -49,18 +49,45 @@ def l_min(l):
 
 def l_max(l):
     max1=l[0]
-    for o in range(len(l)):
+    for i in range(len(l)):
         if (l[i]>max1):
             max1=l[i]
     return max1
 
+def l_append_before(l,z):
+    newl=[]
+    for i in range(len(z)):
+        newl.append(z[i])
+    for i in range(len(l)):
+        newl.append(l[i])
+    return newl
+
+def l_append_end(l,z):
+    newl=[]
+    for i in range(len(l)):
+        newl.append(l[i])
+    for i in range(len(z)):
+        newl.append(z[i])
+    return newl
+
+def l_average(l):
+    sum=0
+    for i in range(len(l)):
+        sum=sum+l[i]
+    avg=sum/len(l)
+    return avg
+
 x=[]
+y=[1,2,3]
 i=1
 while(i!=0):
-    x1=input("Enter the element of the list \t")
+    x1=int(input("Enter the element of the list \t"))
     x.append(x1)
     i=int(input("Enter '0' to stop and '1' to continue entering on list l \t"))
 
 print("The list l=",x)
 print("\n The minimum element in the list is ",l_min(x))
 print("\n The maximum element in the list is ",l_max(x))
+print("\n newlist after list y is append befoe list l is =",l_append_before(x,y))
+print("\n newlist after list y is append at end of the list l is =",l_append_end(x,y))
+print("\n The Average of the list l is =", l_average(x))
