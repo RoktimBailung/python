@@ -91,3 +91,22 @@ print("\n The maximum element in the list is ",l_max(x))
 print("\n newlist after list y is append befoe list l is =",l_append_before(x,y))
 print("\n newlist after list y is append at end of the list l is =",l_append_end(x,y))
 print("\n The Average of the list l is =", l_average(x))
+
+# ovbious sort 
+def sort(l):
+    nlist=[]
+    while(len(l)>0):
+        mini=l[0]
+        for i in range(len(l)):
+            if l[i]<mini:
+                mini=l[i]
+        nlist.append(mini)
+        l.remove(mini)
+    return nlist
+    
+n=int(input("Enter the number of elements you required in the list \t"))
+l1=[]
+for i in range(n):
+    l1.append(int(input("Enter the element")))
+print("After sorting the list :",sort(l1))
+
