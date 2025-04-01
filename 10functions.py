@@ -110,3 +110,91 @@ for i in range(n):
     l1.append(int(input("Enter the element")))
 print("After sorting the list :",sort(l1))
 
+# functions examples
+# Q1 To calculate the number of uppercase,lowercase,charcaters,words of the sentence
+def cupper(s):
+    upperl=0
+    for c in s:
+        if(c.isupper()):
+            upperl+=1
+    return upperl
+
+def clower(s):
+    lowerl=0
+    for c in s:
+        if(c.islower()):
+            lowerl+=1
+    return lowerl
+
+def ccharacter(s):
+    ccount=0
+    for c in s:
+        ccount+=1
+    return ccount
+
+def cwords(s):
+    count=0
+    for c in s:
+        if(c==' '):
+            count+=1
+    return count+1
+
+sentence=input("Enter a Sentence\t")
+print(f'The number of upper case letter ={cupper(sentence)}')
+print(f'The number of lower case letter ={clower(sentence)}')
+print(f'The number of total character ={ccharacter(sentence)}')
+print(f'The number of words ={cwords(sentence)}')
+
+
+# Q2 To calculate the area and perimeter of the circle and rectangle using functions
+def carea(r):
+    a=3.14*r*r
+    return round(a)
+def rarea(l,b):
+    a=l*b
+    return round(a)
+def cperi(r):
+    p=2*3.14*r
+    return round(p)
+def rperi(l,b):
+    p=2*(l+b)
+    return round(p)
+
+shape=input("Enter the shape either circle or rectangle :\t")
+if(shape=="circle"):
+    prop=input("Enter either area or perimeter : \t")
+    rad=int(input("Enter the radius of the circle: \t"))
+    if (prop=="area"):
+        print(f'The area of the circle is={carea(rad)}')
+    elif (prop=="perimeter"):
+        print(f'The perimeter of the circle is={cperi(rad)}')
+    else:
+        print("invalid")
+elif(shape=="rectangle"):
+    prop=input("Enter either area or perimeter : \t")
+    l=int(input("Enter the length  of the rectangle: \t"))
+    b=int(input("Enter the  breadth of the rectangle: \t"))
+    if (prop=="area"):
+        print(f'The area of the rectangle is={rarea(l,b)}')
+    elif (prop=="perimeter"):
+        print(f'The perimeter of the rectangle is={rperi(l,b)}')
+    else:
+        print("invalid")
+else:
+    print("Invalid")
+
+# Q3 To check whether the given points form a triangle or not
+def istriangle(x1,y1,x2,y2,x3,y3):
+    area=0.5*abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))
+    if(area==0):
+        print("Not a triangle")
+    else:
+        print("It's a triangle")
+
+x1=float(input("Enter the x coordinate of 1st point = "))
+y1=float(input("Enter the y coordinate of 1st point = "))
+x2=float(input("\nEnter the x coordinate of 2nd point = "))
+y2=float(input("Enter the y coordinate of 2nd point = "))
+x3=float(input("\nEnter the x coordinate of 3rd point = "))
+y3=float(input("Enter the y coordinate of 3rd point = "))
+istriangle(x1,y1,x2,y2,x3,y3)
